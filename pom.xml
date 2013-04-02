@@ -91,6 +91,13 @@
                 <extensions>true</extensions>
             </plugin>
         </plugins>
+        <extensions>
+        	<extension>
+            	<groupId>org.apache.maven.wagon</groupId>
+           		<artifactId>wagon-ssh</artifactId>
+            	<version>2.4</version>
+        	</extension>
+    	</extensions>
     </build>
 
     <repositories>
@@ -126,4 +133,12 @@
             </dependencies>
         </profile>
     </profiles>
+    
+	<distributionManagement>
+    	<repository>
+      		<id>um-libraries-repo</id>
+      		<name>UMD REPO</name>
+      		<url>scp://maven.lib.umd.edu/apps/apache/html/maven2</url>
+    	</repository>
+	</distributionManagement>
 </project>
